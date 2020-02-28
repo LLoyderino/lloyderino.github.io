@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div id="nav">
+    <ul>
+      {% for item in site.data.pages.list %}
+        <li><a href="{{ item.url }}">{{ item.title | upcase }}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="container">
+    {{ content }}
+  </div>
+</body>
+
+</html>
