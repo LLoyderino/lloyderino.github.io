@@ -8,15 +8,25 @@
 </head>
 
 <body>
-  <div id="nav">
-    <ul>
-      {% for item in site.data.pages.list %}
-        <li><a href="{{ item.url }}">{{ item.title | upcase }}</a></li>
-      {% endfor %}
-    </ul>
-  </div>
-  <div id="container">
-    {{ content }}
+  <div class="container">
+    <div class="header">
+      <div class="inner_header">
+        <div class="logo">
+          <span class="mark">$</span>
+          <span class="title">{{ page.path }}</span>
+          <span class="cursor animate-flicker"></span>
+        </div>
+        <ul class="nav">
+          {% for item in site.data.pages.list %}
+          <li><a href="{{ item.url }}">{{ item.title | upcase }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="content">
+      {{ content }}
+    </div>
+    <div class="footer"></div>
   </div>
 </body>
 

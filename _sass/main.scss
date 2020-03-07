@@ -18,39 +18,118 @@ h1 {
 }
 
 p {
-  color: $dark-grey;
+  color: $medium-grey;
 }
 
-#nav {
-  height: 8vh;
-  width: 96vw;
-  border-bottom: 1px solid $light-grey;
-  margin: auto;
+.container {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   align-items: center;
 }
 
-#nav ul {
-  list-style-type: none;
+.header {
+  height: 7vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: $background-header;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Old versions of Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; 
+}
+
+.inner_header {
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  color: $medium-grey;
+}
+
+.inner_header ul {
+  list-style: none;
   margin: 0;
 }
 
-#nav li {
+.inner_header li {
   display: inline;
   font-size: 20px;
   font-weight: 200;
 }
 
-#nav a {
+.inner_header a {
   padding: 24px;
   color: $medium-grey;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
-#container {
+.logo {
+  display: flex;
+  align-items: flex-start;
+}
+
+.mark {
+  padding-right: 6px;
+}
+
+.title {
+  padding-right: 6px;
+}
+
+.cursor {
+  width: 10px;
+  height: 20px;
+  background-color: #fe5186;
+}
+
+.nav {
+  display: flex;
+  align-items: flex-end;
+}
+
+.container {
+  display: flex;
+  background-color: $background-body;
+  flex-grow: 1;
+}
+
+.content {
+  width: 800px;
   display: flex;
   flex-direction: column;
-  flex: 1 0 auto;
-  align-items: center;
+  flex-grow: 1;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+.animate-flicker {
+   -webkit-animation: flickerAnimation 1.5s infinite;
+   -moz-animation: flickerAnimation 1.5s infinite;
+   -o-animation: flickerAnimation 1.5s infinite;
+    animation: flickerAnimation 1.5s infinite;
 }
