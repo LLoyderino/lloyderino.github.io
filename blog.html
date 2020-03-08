@@ -1,0 +1,35 @@
+---
+layout: default
+title: Blog
+---
+
+<h1>Posts</h1>
+<ul>
+  {% for post in site.posts %}
+  <li>
+    <h3>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </h3>
+    <span>{{ post.date | date_to_string }}</span>
+  </li>
+  {% endfor %}
+</ul>
+
+<style>
+  .content ul {
+    list-style: none;
+  }
+
+  .content li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dashed #a9a9b3;
+  }
+
+  .content a {
+    color: #EBEBEB;
+    text-decoration: none;
+  }
+</style>
