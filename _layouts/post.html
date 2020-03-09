@@ -8,7 +8,10 @@
     {% include header.html %}
     <div class="content">
       <div class="post-form">
-        <h1>{{ page.title }}</h1>
+        <div class="post-header">
+          <h1>{{ page.title }}</h1>
+          <p> {{ page.date | date: "%-d %b %Y (%H:%M)"}}</p>
+        </div>
         {{ content }}
       </div>
       <div class="tags">
@@ -37,6 +40,10 @@
   .post-form {
     padding-bottom: 20px;
     border-bottom: 1px solid #a9a9b3;
+  }
+
+  .post-header {
+    padding-bottom: 10px;
   }
 
   .tags {
