@@ -5,7 +5,7 @@ layout: default
 
 # About Me
 
-Welcome to my page I hope you enjoy your staying
+Not sure what to write here yet, will fill in later on&trade;
 
 # About the site
 
