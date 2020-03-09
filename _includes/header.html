@@ -7,7 +7,7 @@
     </div>
     <ul class="nav">
       {% for item in site.data.pages.list %}
-      <li><a href="{{ item.url }}">{{ item.title | upcase }}</a></li>
+      <li><a href="/{{ item.url }}">{{ item.title | upcase }}</a></li>
       {% endfor %}
     </ul>
   </div>
